@@ -1,0 +1,22 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+
+namespace Class_Practice
+{
+    public class Property
+    {
+
+        public string username
+        {
+            get;
+            set;
+        }
+        public string password
+        {
+            get;
+            set;
+        }
+    }
+}
