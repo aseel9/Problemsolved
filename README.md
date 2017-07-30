@@ -1,5 +1,3 @@
 # Problemsolved
 Good to be with best.. 
-
-
-hello world.... some of tricks to slove html related problems
+asshole bandy k putroun ki tarha kam kia kr
