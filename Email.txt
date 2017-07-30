@@ -1,0 +1,25 @@
+ public void SendConfirmation()
+    {
+       
+        MailMessage mail = new MailMessage("rameez@yahoo.com", this.Email);
+
+        mail.Subject = "Booking Confirmation";
+        mail.Body = CreateConfirmationEmailMessage(); 
+        mail.IsBodyHtml = true; 
+        SmtpClient smtpHost = new SmtpClient("smtp.mail.yahoo.com", 587); 
+        smtpHost.Credentials = new NetworkCredential("rameez@yahoo.com", "12345");
+        smtpHost.EnableSsl = true;
+        smtpHost.Send(mail); 
+    }
+
+    public string CreateConfirmationEmailMessage()
+    {
+        System.Text.StringBuilder message = new System.Text.StringBuilder();
+
+        message.AppendLine("<p>Dear " + this.FirstName + " " + this.LastName + ",</p>");
+        message.AppendLine("<p>Thank you for your booking. Someone will get in touch in due course.</p>");
+        message.AppendLine("<p>Best regards</p>");
+       
+
+        return message.ToString();
+    }
